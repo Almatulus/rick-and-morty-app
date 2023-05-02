@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+//Основной цвет кнопок
+.v-btn{
+    background-color: $button-main-color;
+}
+
+.v-app-bar{
+    background-color: $button-main-color!important;
+}
+
+.v-tab--active{
+    // color: $button-main-color;
+    caret-color: $button-main-color!important;
+}

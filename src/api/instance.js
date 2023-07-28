@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const instance = axios.create({
-    baseURL: 'https://rickandmortyapi.com/api/'
+const axiosInstance = axios.create({
+    baseURL: 'https://rickandmortyapi.com/api/',
+    timeout: 5000
   });
 
-  export default instance;
+  export default axiosInstance;

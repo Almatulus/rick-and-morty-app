@@ -1,0 +1,12 @@
+$material-light: (
+  theme: (
+    light: true,
+  ),
+  themeable: true,
+);
+
+@import '~vuetify/src/styles/styles.sass';
+
+$shadow-card: none; // Устанавливаем значение none для переменной
+
+@import '~vuetify/src/styles/settings/_variables.scss';

@@ -7,8 +7,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'd',
-    component: HomeView
+    redirect: '/hello'
   },
   {
     path: '/hello',
@@ -21,25 +20,38 @@ const routes = [
     name: 'home',
     component: () => import('@/views/HomeView.vue'),
     meta: {layout: 'main'},
-    children: [
-      {
-        path: 'characters',
-        name: 'characters',
-        component: () => import('@/views/Characters/Characters.vue'),
-      },
-      {
-        path: 'locations',
-        name: 'locations',
-        component: () => import('@/views/Characters/Characters.vue'),
-      },
-      {
-        path: 'episodes',
-        name: 'episodes',
-        component: () => import('@/views/Characters/Characters.vue'),
-      },
-    ]
-    
   },
+  {
+    path: '/characters',
+    name: 'characters',
+    meta: {layout: 'main'},
+    component: () => import('@/views/Characters/Characters.vue'),
+  },
+  {
+    path: '/character/:id',
+    name: 'character/id',
+    params: true,
+    meta: {layout: 'main'},
+    component: () => import('@/views/Characters/CharacterInfo.vue'),
+  },
+  {
+    path: '/locations',
+    name: 'locations',
+    meta: {layout: 'main'},
+    component: () => import('@/views/Locations/Locations.vue'),
+  },
+  // {
+  //   path: '/locations/:id',
+  //   name: 'locations/id',
+  //   meta: {layout: 'main'},
+  //   component: () => import('@/components/locations/LocationInfo.vue'),
+  // },
+  {
+    path: '/episodes',
+    name: 'episodes',
+    meta: {layout: 'main'},
+    component: () => import('@/views/Episodes/Episodes.vue'),
+  }
 ]
 
 const router = new VueRouter({

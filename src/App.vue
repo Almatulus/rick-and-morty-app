@@ -28,6 +28,6 @@ export default {
 
 <style lang="scss" scoped>
 .v-main{
-  overflow: hidden;
+
 }
 </style>

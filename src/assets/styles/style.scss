@@ -9,7 +9,57 @@
     background-color: $button-main-color!important;
 }
 
+.v-tab{
+    color: #fff!important;
+}
+
 .v-tab--active{
     // color: $button-main-color;
     caret-color: $button-main-color!important;
 }
+
+//Сообщение об ошибках
+.invalid-feedback{
+    color: red!important;
+    font-size: 18px;
+}
+
+//Убираем из фильтров радио-кнопки
+.hide-radio input[type="radio"] {
+    position: absolute!important;
+    opacity: 0!important;
+    pointer-events: none!important;
+  }
+  
+  .hide-radio .v-input--radio .v-input--selection-controls__ripple {
+    display: none!important;
+  }
+  
+  .hide-radio .v-input--radio .v-icon {
+    display: none!important;
+  }
+  
+  .hide-radio .v-input--radio .v-label {
+    padding-left: 0!important; /* Если нужно удалить отступ слева метки */
+  }
+  
+  .hide-radio{
+      .v-input--selection-controls__input{
+          display: none!important;
+          opacity: 0!important;
+      }
+  }
+
+
+//Лейбл радиокнопок фильтра
+.theme--dark.v-label{
+    color: #fff!important;
+}
+
+.info__text{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(158, 158, 158);
+}
+
+
